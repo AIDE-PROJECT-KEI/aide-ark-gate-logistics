@@ -1,0 +1,13 @@
+{
+  "task": "structure_logistics_request",
+  "candidate": {
+    "item": "FROZEN_FOOD",
+    "qty_case": 120,
+    "from": "WAREHOUSE_A",
+    "to": "STORE_B",
+    "eta": "2026-11-24 AM",
+    "carrier": "CONTRACT_REEFER"
+  },
+  "source": "shipper_email.txt",
+  "executes": false
+}

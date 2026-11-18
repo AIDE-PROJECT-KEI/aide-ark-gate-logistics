@@ -1,0 +1,19 @@
+{
+  "task": "propose_alternatives",
+  "hold_reasons": ["11/24の冷凍車は満車", "再委託先が未承認"],
+  "alternatives": [
+    {
+      "id": 1,
+      "recommended": true,
+      "plan": "11/25（水）午前・自社冷凍便（OWN_REEFER）",
+      "why": "空き枠あり／契約の範囲内／承認者：配車責任者"
+    },
+    {
+      "id": 2,
+      "recommended": false,
+      "plan": "再委託先を申請して、11/24（火）に配送",
+      "why": "再委託先の登録・承認が必要"
+    }
+  ],
+  "executes": false
+}

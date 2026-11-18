@@ -1,0 +1,21 @@
+{
+  "_note": "架空のサンプルデータです。",
+  "inventory": {
+    "WAREHOUSE_A": { "FROZEN_FOOD": { "qty_case": 140 } }
+  },
+  "dispatch_capacity": {
+    "2026-11-24": { "CONTRACT_REEFER": { "available_trucks": 0 }, "OWN_REEFER": { "available_trucks": 0 } },
+    "2026-11-25": { "CONTRACT_REEFER": { "available_trucks": 1 }, "OWN_REEFER": { "available_trucks": 1 } }
+  },
+  "contracts": {
+    "CONTRACT_REEFER": { "type": "reefer", "rate_within_contract": true },
+    "OWN_REEFER": { "type": "reefer", "rate_within_contract": true }
+  },
+  "subcontractors": {
+    "SUBCONTRACTOR_X": { "registered": false, "approved": false }
+  },
+  "permissions": {
+    "dispatcher_tanaka": { "role": "担当者", "order_limit_case": 200, "can_approve_dispatch_change": false },
+    "manager_sato": { "role": "配車責任者", "order_limit_case": 1000, "can_approve_dispatch_change": true }
+  }
+}

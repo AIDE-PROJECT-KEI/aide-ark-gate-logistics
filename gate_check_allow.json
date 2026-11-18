@@ -1,0 +1,14 @@
+{
+  "_note": "代案①・責任者承認後の再照合結果の例（構想）。",
+  "candidate": { "item": "FROZEN_FOOD", "qty_case": 120, "from": "WAREHOUSE_A", "to": "STORE_B", "eta": "2026-11-25 AM", "carrier": "OWN_REEFER" },
+  "approved_by": "manager_sato（配車責任者）",
+  "checks": [
+    { "item": "契約条件", "result": "OK" },
+    { "item": "発注権限", "result": "OK" },
+    { "item": "在庫", "result": "OK" },
+    { "item": "配送状況", "result": "OK", "detail": "11/25 自社冷凍便に空き枠あり" },
+    { "item": "承認状況", "result": "OK", "detail": "配車責任者が承認済み" }
+  ],
+  "decision": "ALLOW",
+  "executed": "配車を確定"
+}

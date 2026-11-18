@@ -1,0 +1,14 @@
+{
+  "_note": "AIDE ARK GATE の照合結果の例（構想）。",
+  "candidate_ref": "gemini_candidate.json",
+  "checks": [
+    { "item": "契約条件", "result": "OK", "detail": "冷凍便・単価は契約の範囲内" },
+    { "item": "発注権限", "result": "OK", "detail": "担当者の発注上限内（120 ≤ 200）" },
+    { "item": "在庫", "result": "OK", "detail": "A倉庫 在庫140ケース" },
+    { "item": "配送状況", "result": "UNRESOLVED", "detail": "11/24の冷凍車は満車 → 再委託案" },
+    { "item": "承認状況", "result": "UNRESOLVED", "detail": "再委託先 SUBCONTRACTOR_X は未登録・未承認" }
+  ],
+  "decision": "HOLD",
+  "executed": false,
+  "next": "代わりの案の作成（Gemini）と、配車責任者の承認を待つ"
+}
