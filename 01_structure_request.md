@@ -1,6 +1,6 @@
 # 01 依頼 → 発注・配車の候補（Gemini）
 
-**入力**：`samples/shipper_email.txt` と `samples/business_data.json`
+**入力**：`shipper_email.txt` と `business_data.json`
 
 ```
 あなたは物流担当者のアシスタントです。
@@ -19,4 +19,4 @@
 （business_data.json の内容を貼る）
 ```
 
-**出力例**：`samples/gemini_candidate.json`
+**出力例**：`gemini_candidate.json`

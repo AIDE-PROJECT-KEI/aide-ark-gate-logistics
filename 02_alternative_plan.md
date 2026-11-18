@@ -1,6 +1,6 @@
 # 02 HOLD理由 → 代わりの案（Gemini）
 
-**入力**：`samples/gate_check_hold.json` と `samples/business_data.json`
+**入力**：`gate_check_hold.json` と `business_data.json`
 
 ```
 AIDE ARK GATE が次の理由で配車を HOLD（保留）しました。
@@ -19,4 +19,4 @@ AIDE ARK GATE が次の理由で配車を HOLD（保留）しました。
 （business_data.json の内容を貼る）
 ```
 
-**出力例**：`samples/gemini_alternatives.json`
+**出力例**：`gemini_alternatives.json`

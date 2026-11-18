@@ -8,7 +8,7 @@ Google AIチャレンジ（はたらく・まなぶ部門）応募作品。
 > ⚠️ **構想デモです。** 物流システム連携・法令判定は未実装で、実証・開発が必要な将来機能です。
 > 本リポジトリの荷主・品目・数量・事業者・データはすべて架空のサンプルです。
 
-![Gemini が考え、AIDE ARK GATE が確かめる](docs/images/05_summary.jpg)
+![Gemini が考え、AIDE ARK GATE が確かめる](05_summary.jpg)
 
 ---
 
@@ -37,13 +37,13 @@ Geminiの出力は常に「候補」です。Geminiに発注・配車・支払�
 
 1. **依頼**：荷主から「11/24（火）午前、A倉庫→B店へ冷凍食品120ケース、いつもの冷凍便で」とメールが届く
 2. **Geminiが候補をつくる**：発注量・納品先・希望日時・運送条件を構造化（`executes: false`）
-   ![Geminiの候補](docs/images/01_gemini_candidate.jpg)
+   ![Geminiの候補](01_gemini_candidate.jpg)
 3. **GATEが照合 → HOLD**：契約・権限・在庫はOK。火曜の冷凍車は満車、再委託先は未承認
-   ![GATEの照合](docs/images/02_gate_hold.jpg)
+   ![GATEの照合](02_gate_hold.jpg)
 4. **Geminiが代案 → 承認 → ALLOW**：水曜午前の自社冷凍便を提案。責任者が承認し、GATEが再照合して配車確定
-   ![代案とALLOW](docs/images/03_alternative_allow.jpg)
+   ![代案とALLOW](03_alternative_allow.jpg)
 5. **Geminiが荷主への連絡を下書き**：送信は担当者が確認してから
-   ![連絡の下書き](docs/images/04_gemini_draft.jpg)
+   ![連絡の下書き](04_gemini_draft.jpg)
 
 ## 利用場面
 
@@ -58,31 +58,27 @@ Geminiの出力は常に「候補」です。Geminiに発注・配車・支払�
 
 **進め方**：対象業務を一度に広げず、まず一つの操作を選び、業務システムと接続して実証します。
 
-## リポジトリ構成
+## ファイル構成
 
-```
-README.md
-prompts/
-  01_structure_request.md     依頼 → 候補（構造化出力）を作るGeminiプロンプト
-  02_alternative_plan.md      HOLD理由 → 代わりの案を作るGeminiプロンプト
-  03_shipper_message.md       確定内容 → 荷主への連絡下書きを作るGeminiプロンプト
-samples/
-  shipper_email.txt           架空の荷主メール
-  business_data.json          架空の業務データ（在庫・配車枠・契約・権限・承認）
-  gemini_candidate.json       Geminiの候補（出力例）
-  gate_check_hold.json        GATEの照合結果（HOLD）の例
-  gemini_alternatives.json    Geminiの代案（出力例）
-  gate_check_allow.json       再照合結果（ALLOW）の例
-docs/
-  gate_checks.md              照合項目と判定の流れ
-  images/                     デモ動画の画面
-```
+| ファイル | 内容 |
+|---|---|
+| `01_structure_request.md` | Geminiプロンプト：依頼 → 候補（構造化出力） |
+| `02_alternative_plan.md` | Geminiプロンプト：HOLD理由 → 代わりの案 |
+| `03_shipper_message.md` | Geminiプロンプト：確定内容 → 荷主への連絡下書き |
+| `shipper_email.txt` | 架空の荷主メール |
+| `business_data.json` | 架空の業務データ（在庫・配車枠・契約・権限・承認） |
+| `gemini_candidate.json` | Geminiの候補（出力例） |
+| `gate_check_hold.json` | GATEの照合結果（HOLD）の例 |
+| `gemini_alternatives.json` | Geminiの代案（出力例） |
+| `gate_check_allow.json` | 再照合結果（ALLOW）の例 |
+| `gate_checks.md` | 照合項目と判定の流れ |
+| `01〜05_*.jpg` | デモ動画の画面 |
 
 ## 実装状況
 
 | 項目 | 状況 |
 |---|---|
-| Geminiによる依頼の構造化・代案・連絡下書き | プロンプトで試行可能（本リポジトリ `prompts/`） |
+| Geminiによる依頼の構造化・代案・連絡下書き | プロンプトで試行可能（本リポジトリのプロンプト） |
 | GATEの照合・ALLOW／HOLD／DENY判定 | 構想（サンプルデータで流れを示す） |
 | TMS・WMS等の物流システム連携 | 未実装（実証・開発が必要な将来機能） |
 | 法令判定 | 未実装（実証・開発が必要な将来機能） |

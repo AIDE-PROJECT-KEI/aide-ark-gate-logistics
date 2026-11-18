@@ -1,6 +1,6 @@
 # 03 確定内容 → 荷主への連絡（下書き）（Gemini）
 
-**入力**：`samples/gate_check_allow.json` と `samples/shipper_email.txt`
+**入力**：`gate_check_allow.json` と `shipper_email.txt`
 
 ```
 次の確定内容をもとに、荷主への変更連絡メールを下書きしてください。
